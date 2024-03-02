@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<title>Final-APCV403</title>
+</head>
+<body>
+	<div id="view">
+		<h1 id="title">Kemy's Lights Out Game</h1>
+		<button id="reset">New Game</button>
+		<div id="game">
+			<span>0</span><span>1</span><span>2</span><span>3</span><span>4</span>
+			<span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+			<span>10</span><span>11</span><span>12</span><span>13</span><span>14</span>
+			<span>15</span><span>16</span><span>17</span><span>18</span><span>19</span>
+			<span>20</span><span>21</span><span>22</span><span>23</span><span>24</span>
+
+		</div>
+		<div id="details">
+			<span id='target'><em>Target: </em>  <em>x</em></span>
+			<span id="moves"><em>Moves: </em>  <em>0</em></span>
+			<span id="time"><em>Time: </em>  <em>--</em></span>
+		</div>
+		<div id="solution">
+			<button id="solutionb">Show Min Solution</button>
+			<div>
+				<em>Indexes: </em>
+				<em id="sol"></em>
+			</div>
+		</div>
+
+
+
+	</div>
+	<p>
+		(I am using the Azure Static web app method to publish my webpage as it does not cost me anything (moneywise). But it looks like there is no way to display the URL with the path. I would like to confirm that I understand all the procedures of webpage hosting and that my choice is solely based on finance and does not reflect a gap in my learning. )
+	</p>
+	<h1>Addendum</h1>
+	<p>
+		I tried to keep everything simple for that little JS program, using mostly Jquerry and event delegation whenever necessary. I placed all the cells of my game in a div element and formatted the board with a CSS grid. For the cells of the game, I used event delegation on the parent element (the div) of those cells. With that, I was able to know which cell was clicked using the indexing function of jQuery. With my index and some simple math (i+5. i-5, i-1, i+1), I was able to implicitly assign a position around the clicked element (above the clicked element, below the clicked element, on the right or left of the clicked element). From there, everything was simple: the program went through all the neighboring elements and set them in the isOff class if they were in the isOn class or the opposite if they were in the inOff class. I chose to display information to make everything seem very interactive. I displayed the minimum moves possible, which is random and is set before the program even starts. I also displayed the player's current move number. I also thought it would be nice to display a timer, and that has given me more insight into how time intervals work in Js.
+
+	</p>
+	<script type="text/javascript" src="jquery-3.7.1.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+    <footer>
+        <p>Last updated: 
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+    <script type="text/javascript">
+         var x = document.lastModified;
+         document.getElementById('lastModified').textContent = x;
+    </script>
+</body>
+</html>

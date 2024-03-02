@@ -1,0 +1,109 @@
+body{
+	background-color: rgb(138, 43, 226, 1.0);
+}
+ul{
+	list-style: none;
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: ;
+}
+li{
+	display:flex;
+	justify-content: space-between;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+div#view{
+	width: 35vw;
+	min-width: 370px;
+
+	min-height: 600px;
+	max-height: 1000px;
+
+	border: solid;
+	border-radius: 20px;
+	margin:25px auto auto auto;
+	background-color: white;
+}
+
+
+@font-face{
+	font-family: 'gv';
+	src: url('gv.ttf') format('truetype');
+}
+
+
+#title{
+	font-family: gv, cursive;
+	font-size: 2em;
+	text-shadow: 5px 5px 5px blueviolet;
+	text-align: center;
+}
+div#game{
+	margin: 0 auto;
+	width: 30vw;
+	min-width: 370px;
+
+	height: 30vw;
+	min-height: 370px;
+	display: grid;
+	grid-template-rows: repeat(5,1fr) ;
+	grid-template-columns: repeat(5,1fr) ;
+}
+div#game span.isoff{
+	color: white;
+}
+div#game span {
+	border: solid thin blueviolet;
+}
+
+button {
+	margin: 30px auto;
+	display: block;
+	padding: 10px 20px;
+	background-color: #6a5acd; /* Blue-violet color */
+	color: #ffffff; /* White text */
+	text-align: center;
+	text-decoration: none;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+button:hover {
+	background-color: #483d8b; /* Darker shade on hover */
+}
+
+.ison{
+	background-color: ghostwhite;
+}
+
+.isoff{
+	background-color: black;
+}
+
+#details{
+	margin: 30px auto;
+	width: 30vw;
+	min-width: 370px;
+
+	display: flex;
+	justify-content: space-evenly;
+
+}
+
+#solution{
+	margin: 30px auto;
+	width: 30vw;
+	min-width: 370px;
+
+	display: flex;
+	justify-content: space-evenly;
+
+}
+p{
+	color: white;
+}
